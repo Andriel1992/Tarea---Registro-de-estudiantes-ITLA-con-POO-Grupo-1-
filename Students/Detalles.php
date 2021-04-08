@@ -2,9 +2,11 @@
 
 require_once '../Helpers/utilities.php';
 require_once 'estu.php';
+require_once '../layout/layout.php';
 require_once '../service/IServiceBase.php';
 require_once 'estuServiceCookies.php';
 
+$layout = new Layout();
 $service = new estuServiceCookies();
 $utilities = new utilities();
 $isContaintId = isset($_GET['id']);   
@@ -40,34 +42,11 @@ exit();
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles</title>
-    <link href="..\assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="..\assets\css\style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-    <script href="..\assets\js\bootstrap.min.js"></script>
-</head>
-
-<body>
-
-<nav class="navbar navbar-dark bg-dark">
-  <form class="form-inline">
-    
-    <a href="..\index.php">
-        <button class="btn btn-outline-success font-weight-bold" type="button"> Inicio </button>
-    </a>
-    
-  </form>
-
-</nav>
+<?php echo $layout->printHeader(); ?>
 
 <h2 class="text-center">Detalles del estudiante </h2>
 
-    <div class="forma card bg-white" style="width: 18rem;">
+    <div class="diseno card bg-white" style="width: 22rem;">
 
  <?php if($element->profilePhoto == "" || $element->profilePhoto == null): ?>
 
@@ -86,7 +65,7 @@ exit();
        <p class="text-muted"><?php echo $element->nombre; ?></p> 
        <p class="text-muted"><?php echo $element->apellido; ?></p>
 
-       <label class="font-weight-bold" for="asignacion">Asignacion favorita:</label>
+       <label class="font-weight-bold" for="asignacion">Materia favorita:</label>
        <p class="text-muted"><?php echo $element->asignacion; ?><img src="..\assets\img\estrella.png"></p>
       
        <label class="font-weight-bold" for="carrera">Carrera:</label>
@@ -102,24 +81,5 @@ exit();
 
        </div>
 
-<style >
-  
-  footer{
-  position:fixed;
-  left:0px;
-  bottom:0px;
-  width:100%;
-  }
 
-</style>
-
-<footer class="page-footer font-small blue bg-dark">
- <div class="footer-copyright text-center py-3">
-  
-   <h5>© 2020 Xiolin Ramirez</h5> 
-  
- </div>
-</footer>
-
-</body>
-</html>
+<?php echo $layout->printFooter(); ?>

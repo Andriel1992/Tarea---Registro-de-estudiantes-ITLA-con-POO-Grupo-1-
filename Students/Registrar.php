@@ -35,9 +35,9 @@ isset($_POST['asignacion']) && isset($_FILES['profilePhoto'])){
 
 <form enctype="multipart/form-data" action="Registrar.php" method="POST">
 
-<div class="forma card bg-white">
-    <div class="card-header ch bg-success font-weight-bold">
-    Registro de estudiantes
+<div class="diseno card">
+    <div class="card-header ch bg-dark text-white font-weight-bold">
+    Registrar de estudiantes
     </div>
 
         <label class="font-weight-bold" for="photo">Foto de perfil</label>
@@ -49,7 +49,7 @@ isset($_POST['asignacion']) && isset($_FILES['profilePhoto'])){
         <label class="font-weight-bold" for="apellido">Apellido</label>
         <input type="text" name="apellido" placeholder="Apellido"  id="apellido">
 
-        <label class="font-weight-bold"  for="apellido">Asignacion favorita</label>
+        <label class="font-weight-bold"  for="apellido">Materia favorita</label>
         <input type="text" name="asignacion" placeholder="Asignacion favorita"  id="asignacion">
 
         <label class="font-weight-bold" for="carrera">Carrera</label>
@@ -63,14 +63,14 @@ isset($_POST['asignacion']) && isset($_FILES['profilePhoto'])){
 
         </select>
 
-      <p class="es font-weight-bold">Estatus del estudiante</p>
+      <p class="font-weight-bold">Estatus del estudiante</p>
 
        <div class="form-check">
        <input type="checkbox" class="form-check-input" name="check" id="check" Value="Activo" checked >
        <label for="estatus">Activo</label>
        </div>
       
-        <button type="submit" class="btn btn-primary " id="sendForm">Enviar</button> 
+        <button type="submit" class="btn btn-primary " id="sendForm">Guardar</button> 
 
         
 </div>

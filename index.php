@@ -66,7 +66,7 @@ if (!empty($listadoEstu)) {
 
         <div class="container">
           <div class="row justify-content-center">
-            <h5>No hay registro de estudiantes aun.</h5>
+            <h5>No hay estudiantes registrados.</h5>
           </div>
         </div>
 
@@ -114,7 +114,7 @@ if (!empty($listadoEstu)) {
 
 <script class="text/javascript">
   function preguntar(id) {
-    if (confirm('¿Esta seguro que desea eliminar el estudiante?')) {
+    if (confirm('Eliminar Estudiante?')) {
       window.location.href = "Students/Eliminar.php?id=" + id;
     }
   }

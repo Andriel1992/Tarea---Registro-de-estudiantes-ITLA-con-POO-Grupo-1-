@@ -47,8 +47,8 @@ if (isset($_GET['id'])) {
 
 <form enctype="multipart/form-data" action="Editar.php?id=<?php echo $element->id; ?>" method="POST">
 
-  <div class="forma card bg-white">
-    <div class="card-header ch bg-success font-weight-bold">
+  <div class="diseno card bg-white">
+    <div class="card-header text-white bg-dark font-weight-bold">
       Editar de estudiantes
     </div>
     <div class="card" style="width: 18rem;">
@@ -77,7 +77,7 @@ if (isset($_GET['id'])) {
     <label class="font-weight-bold" for="apellido">Apellido</label>
     <input type="text" name="apellido" placeholder="Apellido" id="apellido" value="<?php echo $element->apellido; ?>">
 
-    <label class="font-weight-bold" for="apellido">Asignacion favorita</label>
+    <label class="font-weight-bold" for="apellido">Materia favorita</label>
     <input type="text" name="asignacion" placeholder="Asignacion favorita" id="asignacion" value="<?php echo $element->asignacion; ?>">
 
     <label class="font-weight-bold" for="carrera">Carrera</label>
@@ -100,7 +100,7 @@ if (isset($_GET['id'])) {
 
     </select>
 
-    <p class="es font-weight-bold">Estatus del estudiante</p>
+    <p class="font-weight-bold">Estatus del estudiante</p>
 
 
     <div class="form-check">
@@ -114,7 +114,7 @@ if (isset($_GET['id'])) {
     </div>
 
 
-    <button type="submit" class="btn btn-primary " id="sendForm">Enviar</button>
+    <button type="submit" class="btn btn-primary " id="sendForm">Guardar</button>
 
   </div>
 </form>
